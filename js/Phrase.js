@@ -23,6 +23,18 @@ class Phrase{
     checkLetter = function(letter){
         console.log(this.phrase.includes(letter));
     }
+    showMatchedLetter = function(letter){
+        const letterHolder = document.querySelector('#qwerty').children;
+        console.log(letterHolder, 'listofcards')
+            letterHolder.forEach(letter =>{
+                if(letterHolder[i] === letter){
+                document.letterHolder[i].className = 'show';
+            } else {
+                document.letterHolder[i].className = 'hide';
+            }
+         })
+
+    }
 }
 
 const samplePhrase = new Phrase( 'hello word');
@@ -30,7 +42,9 @@ samplePhrase.addPhraseToDisplay();
 console.log(samplePhrase, 'phrase');
 //samplePhrase.checkLetter;
 samplePhrase.checkLetter('hello word');
-console.log(samplePhrase, 'phase3')
+console.log(samplePhrase, 'phase3');
+samplePhrase.showMatchedLetter('h');
+console.log(samplePhrase, 'phase4');
 
 
 //  checkLetter = function(){
