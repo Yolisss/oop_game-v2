@@ -18,10 +18,10 @@ class Phrase{
                 newPhrase += `<li>${letter}</li>`;
             }
         })   
-        console.log(newPhrase);
+        console.log(newPhrase, 'phrase2');
     }
-    addPhraseToDisplay = function(letter){
-        return this.phrase.includes(letter);
+    checkLetter = function(letter){
+        console.log(this.phrase.includes(letter));
     }
 }
 
@@ -29,6 +29,8 @@ const samplePhrase = new Phrase( 'hello word');
 samplePhrase.addPhraseToDisplay();
 console.log(samplePhrase, 'phrase');
 //samplePhrase.checkLetter;
+samplePhrase.checkLetter('hello word');
+console.log(samplePhrase, 'phase3')
 
 
 //  checkLetter = function(){
@@ -37,7 +39,7 @@ console.log(samplePhrase, 'phrase');
 //         const indivItems = addPhraseToDisplay();
 //             console.log(letters);
 //         letters.addEventListener('click', () =>{
-//             if(e.target === this.phras e)           
+//             if(e.target === this.phrase)           
 //         })
 //     }
 
