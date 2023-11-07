@@ -13,6 +13,10 @@ class Game{
             {phrase: "take her to the moon for me"}],
         this.activePhrase = null
     }
+    getRandomPhrase() {
+        let randomIndex = Math.floor(Math.random() * this.phrases.length);
+        return this.phrases[randomIndex].phrase;
+    }
 }
 
 
