@@ -20,26 +20,26 @@ class Phrase{
         })   
         console.log(newPhrase);
     }
-    checkLetter = function(){
-        //grabbing list of letters
-        const letters = document.querySelectorAll('.key');
-        const indivItems = addPhraseToDisplay();
-            console.log(letters);
-        letters.addEventListener('click', () =>{
-            if(e.target === indivItems){
-                
-            }           
-        })
+    addPhraseToDisplay = function(letter){
+        return this.phrase.includes(letter);
     }
 }
 
 const samplePhrase = new Phrase( 'hello word');
 samplePhrase.addPhraseToDisplay();
 console.log(samplePhrase, 'phrase');
-samplePhrase.checkLetter;
+//samplePhrase.checkLetter;
 
 
-
+//  checkLetter = function(){
+//         //grabbing list of letters
+//         const letters = document.querySelectorAll('.key');
+//         const indivItems = addPhraseToDisplay();
+//             console.log(letters);
+//         letters.addEventListener('click', () =>{
+//             if(e.target === this.phras e)           
+//         })
+//     }
 
 
 
