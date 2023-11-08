@@ -5,11 +5,14 @@
 //creating instances of phrase and game 
 //outcome of phrase and game 
 //const phrase = new Phrase("Fish are friends, not food");
+//const game = new Game();
 const game = new Game();
+game.startGame();
+//console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
 
-const randomPhrase = game.getRandomPhrase();
-const phrase = new Phrase(randomPhrase);
-phrase.addPhraseToDisplay();
+// const randomPhrase = game.getRandomPhrase();
+// const phrase = new Phrase(randomPhrase);
+// phrase.addPhraseToDisplay();
 
 game.phrases.forEach((phrase, index) =>{
     //phrase reps object {phrase: ""}
@@ -23,12 +26,12 @@ game.phrases.forEach((phrase, index) =>{
 //removed the string "fish are friends, not food" but got error msg 
 //toLowerCase undefined.. why? 
 
-phrase.addPhraseToDisplay();
+//phrase.addPhraseToDisplay();
 
 
-console.log(game.getRandomPhrase());
-console.log(game.getRandomPhrase());
-console.log(game.getRandomPhrase());
+// console.log(game.getRandomPhrase());
+// console.log(game.getRandomPhrase());
+// console.log(game.getRandomPhrase());
 
 
 
