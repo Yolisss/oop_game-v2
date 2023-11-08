@@ -10,19 +10,38 @@ class Phrase{
         this.phrase = phrase.toLowerCase();
     }
     addPhraseToDisplay(){
+        const phraseContainer = document.querySelector('#phrase ul');
         let html = ""
-        this.phrase.split("").forEach(letter =>{
-            if(letter === ""){
-                html += " ";
-            } else{
-                html += `<li class="hide letter ${letter}">${letter}</li>`
-                //"where is the ul in dom" => returns HMTL elem 
+         for (const char of this.phrase) {
+            if (char === " ") {
+                html += '<li class="space"> </li>';
+            } else {
+                // create a class with hidden class and the character
+                html += ` <li class="hide letter ${char}">${char}</li>`;
             }
-        })
-        let display =  document.querySelector('#phrase ul');
-            display.insertAdjacentHTML('afterbegin', html);
+        }
+           phraseContainer.innerHTML = html; 
+    }
+   checkLetter(letter) {
+        if (this.phrase.includes(letter)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    showMatchedLetter(letter) {
+        const letters = document.querySelectorAll('.hide'); 
+
+        //loop to see which li contained a certain letter
+        letters.forEach(li => {
+            if (li.innerText === letter) {
+                li.classList.add('show');
+                li.classList.remove('hide');
+            }
+        });
     }
 }
+
 
 {/* <div id="phrase" class="section">
     <ul>
