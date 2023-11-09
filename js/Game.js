@@ -60,7 +60,6 @@ class Game{
        }
     }
 
-    //ckecks if all the letters are revealed
     checkForWin () {
         const phraseLetters = document.querySelectorAll('.hide');
         console.log(phraseLetters);
@@ -71,7 +70,7 @@ class Game{
         }
     }
 
-    //ends the game and the display a win/loss message, and resets the game
+    //win/loss message appears, and resets the game
     gameOver (outcome) {
         const overlay = document.querySelector('#overlay');
         const gameOverMessage = document.querySelector('#game-over-message');
@@ -86,8 +85,7 @@ class Game{
         }
         this.resetGame();
     }
-
-    //step 4, reset the game by resetting missed to 0 
+ 
     resetGame () {
         document.querySelector('#phrase ul').innerHTML = '';
         const qwertyBtns = document.querySelectorAll('#qwerty button');
